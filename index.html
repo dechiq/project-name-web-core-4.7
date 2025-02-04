@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iintoo</title>
+    <link href="https://www.fontsquirrel.com/fonts/barlow">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.svg" alt="logo">
+        </div>    
+        <div class="background">
+            <img src="img/bg.jpg" alt="background">
+        </div>
+            <div class="registration-form">
+                <h1>Get iintoo it today</h1>
+                <p class="explanation">There is no charge or obligation upon registration.</p>
+                <div class="soc-buttons">
+                    <button class="btn-facebook">
+                        Register with Facebook
+                    </button>
+                    <button class="btn-linkedin">
+                        Register with LinkedIn
+                    </button>    
+                </div>
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+                <div class="signup-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="invester-type">
+                        <h3>What type of investor are you? </h3>
+                        <p class="explanation">Select the type of investor you are below.</p>
+                        <div class="radio-type">
+                            <form>
+                                <label class="radio-option">
+                                    <input type="radio" name="investor-type" onclick="changeText('I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.')">
+                                    <span class="radio-label">Individual</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="investor-type" onclick="changeText('I am a business entity investing on behalf of the entity.')">
+                                    <span class="radio-label">Business</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="investor-type" onclick="changeText('I am an entity investing on behalf of its shareholders or members.')">
+                                    <span class="radio-label">Institutional</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="investor-type" onclick="changeText('I am a natural person investing on behalf of a trust.')">
+                                    <span class="radio-label">Other</span>
+                                </label>
+                                <div id="textContainer">Select the type of investor you are below.</div>
+                            </form>
+                            <script>
+                                function changeText(text) {
+                                    document.getElementById("textContainer").innerHTML = text;
+                                }
+                            </script>    
+                        </div>
+                    
+                    </div>
+                    <div class="terms">
+                        <label class="checkbox">
+                            <input type="checkbox" name="terms">
+                            <span class="chekbox-label">I agree to the terms and receiving notifications from iintoo
+                             <a href="#">View full terms</a>   
+                            </span>
+                    </div>
+                    <button type="submit" class="btn-create-account">Create Account</button>
+            </div>
+        
+    </div>                
+       
+                         
+    
+</body>
+</html>
