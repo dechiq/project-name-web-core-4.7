@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Barlow-Black';
+  src: url(font/Barlow-Black.otf) format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
-    font-family: 'Barlow', serif;
+    font-family: 'Barlow-Black', serif;
     background-color: #EFF6FF;
     width: 1500px;  
     height: 100%;  
@@ -7,28 +14,47 @@ body{
 
   }
 
+  .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .registration-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
 
 
 .background{
     display: flex;
     float: left;
-    padding-right: 30px;
+    padding-right: 0px;
+    position: relative;
     
 
 }
 img{
-    width: auto;
+    width: 100%;
     height: auto;
     
 }
 .logo{
     position:absolute;
-    top: 4%;
-    left: 4%;
+    top: 5%;
+    left: 12%;
+    width: 25%;
+    height: auto;
 }
 .registration-form{
-    padding: 48px;
-    background-color: #EFF6FF;
+    padding-left: 48px;
+    background-color: #fbfbfb;
     max-width: 100%;
   }
   h1{
@@ -36,6 +62,7 @@ img{
     color: #2A4A5C;
     margin-bottom: 32px;
     font-weight: 300;
+    margin-top: 48px;
     
   }
 .explanation{
@@ -45,42 +72,47 @@ img{
 }
 .soc-buttons{
 
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
-    gap: 0px;
+    gap: 28px;
     margin-bottom: 32px;
+    padding-right:28px ;
   }
   .btn-facebook, .btn-linkedin{
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 80%;
     height: 40px;
     font-size: 15px;
     border: none;
   }
   .btn-facebook{
-    background-image: url('img/facebook.svg');
-    background-repeat: no-repeat;
+    
+    
     background-color: #255A9B;
-    background-size: 20px;
-    background-position: left center;
-    padding-left: 20px;
+    
+    
   }
   
   .btn-linkedin{
-    background-image: url('img/linkedin.svg');
-    background-repeat: no-repeat;
+    
     background-color: #0076B6;
-    background-size: 20px;
-    background-position: left center;
-    padding-left: 20px;
+    
+    
+  }
+  .icon{
+    width: 18px;
+    height: 18px;
+    padding: 7px ;
   }
   .divider{
     text-align: center;
+    width: 90%;
     position: relative;
-    margin: 32px ;
+    margin-bottom: 32px ;
+    padding-left: 14px;
   }
   
   .divider::before, .divider::after{
@@ -92,26 +124,43 @@ img{
     background-color: #7B8A92;
   }
   .divider::before{
-    left: 66%;
+    left: 24%;
   }
   .divider::after{
-    right: 13%;
+    right: 21%;
   }
   .form-row{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 0;
     margin-bottom: 32px;
   }
- 
-  .form-group input{
-    width: 75%;
-    height:40px
+
+ .form-group{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 32px;
+ }
+
+.form-group label{
+  position: absolute;
+  top: 5px; 
+  left: 10px; 
+  font-size: 12px; 
+  color: #7B8A92; 
+}
+
+  .form-group input {
+    width: 80%;
+    height:30px;
     
+    font-size: 16px;
+    padding: 20px 10px 5px;
   }
-  .form-group{
-    margin-bottom: 32px;
-  }
+
+ 
+
+ 
   h3{
     margin-bottom: 20px;
   }
@@ -138,9 +187,11 @@ img{
   
   .radio-label{
     font-size: 16px;
+    padding-right: 5px;
   }
   #textContainer {
     width: 100%;
+    height: 60px;
     margin-top: 20px;
     padding: 10px;
     background-color: #f0f0f0;
@@ -148,11 +199,22 @@ img{
     font-size: 16px;
     border-radius: 5px;
     color: #7B8A92;
+    display: flex;
+    align-items: center;
+  }
+
+  .info{
+    font-size: 12px;
+    padding-right:10px ;
   }
 
 .chekbox-label{
     font-size: 12px;
     color: #7B8A92;
+}
+
+input[type="checkbox"]{
+    vertical-align: middle;
 }
 
 .terms{
@@ -164,7 +226,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 22%;
+    width: 35%;
     height: 45px;
     font-size: 16px;
     background-color: #3698FB;
@@ -179,11 +241,12 @@ form{
 
 
 #textContainer {
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
     background-color: white;
     border: 1px solid #ccc;
     font-size: 16px;
     border-radius: 5px;
     width: 300px;
+    margin-bottom: 30px;
   }
