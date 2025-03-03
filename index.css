@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Barlow-Black';
-  src: url(font/Barlow-Black.otf) format('otf');
+  font-family: 'Barlow-Regular';
+  src: url("font/Barlow-Regular.otf") format('otf');
   font-weight: normal;
   font-style: normal;
 }
 
 body{
-    font-family: 'Barlow-Black', serif;
+    font-family: 'Barlow-Regular', serif;
     background-color: #EFF6FF;
     width: 1500px;  
     height: 100%;  
